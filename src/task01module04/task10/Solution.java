@@ -19,11 +19,11 @@ public class Solution {
     private boolean flagRotation = true;
 
     public void getResult() {
-        fillSequence();
+        analysisSequence();
         processingSequence();
     }
 
-    private void fillSequence() {
+    private void analysisSequence() {
         int previousValue;
         int currentValue;
         Scanner scanner = new Scanner(System.in);
