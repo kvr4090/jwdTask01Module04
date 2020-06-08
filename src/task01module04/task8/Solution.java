@@ -10,6 +10,7 @@ public class Solution {
         int result;
 
         for (int x = a; x <= b ; x += h ) {
+            
             if (x == 15) {
                 result = (x + c) * 2;
             } else {
