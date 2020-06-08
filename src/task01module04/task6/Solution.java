@@ -8,7 +8,7 @@ package task01module04.task6;
 
 public class Solution {
     
-    public void findValueInt(int a, int d) {
+    public void findValueForInt(int a, int d) {
         long temp;
         int counter = 2;
 
@@ -24,7 +24,7 @@ public class Solution {
         }
     }
 
-    public void findValueLong(int a, int d) {
+    public void findValueForLong(int a, int d) {
         float temp;
         long counter = 2;
 
