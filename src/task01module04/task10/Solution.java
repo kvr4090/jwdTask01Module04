@@ -14,39 +14,58 @@ import java.util.Scanner;
 
 public class Solution {
 
-    public void sequenceProcessing() {
-        int previous;
-        int current;
-        boolean flagIncrease = true;
-        boolean flagTwins = false;
-        boolean flagRotation = true;
-        Scanner sc = new Scanner(System.in);
-        previous = sc.nextInt();
+    private boolean flagIncrease = true;
+    private boolean flagTwins = false;
+    private boolean flagRotation = true;
+
+    public void getResult() {
+        fillSequence();
+        processingSequence();
+    }
+
+    private void fillSequence() {
+        int previousValue;
+        int currentValue;
+        Scanner scanner = new Scanner(System.in);
+        previousValue = scanner.nextInt();
 
         while (true) {
-            current = sc.nextInt();
+            currentValue = scanner.nextInt();
 
-            if (current == 0) {
+            if (currentValue == 0) {
                 break;
             }
 
-            if (current < previous) {
+            if (currentValue < previousValue) {
                 flagIncrease = false;
             }
 
-            if (current == previous) {
+            if (currentValue == previousValue) {
                 flagTwins = true;
                 flagIncrease = false;
             }
 
-            if (((current > 0) && (previous > 0)) || ((current < 0) && (previous < 0))) {
+            if (((currentValue > 0) && (previousValue > 0)) || ((currentValue < 0) && (previousValue < 0))) {
                 flagRotation = false;
             }
-            previous = current;
+            previousValue = currentValue;
+        }
+        scanner.close();
+    }
+
+    private void processingSequence() {
+        if (flagIncrease) {
+            System.out.println("последовательность возрастающая");
         }
 
-        sc.close();
-        ProcessingValues pv = new ProcessingValues(flagIncrease, flagTwins, flagRotation);
-        pv.processing();
+        if (flagTwins) {
+            System.out.println("одна пара одинаковых соседних чисел");
+        }
+
+        if (flagRotation) {
+            System.out.println("последовательность знакочередующаяся");
+        } else {
+            System.out.println("последовательность НЕ знакочередующаяся");
+        }
     }
 }
