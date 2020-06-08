@@ -4,16 +4,9 @@ public class Solution {
     private boolean flag = true;
     private byte counter = 1;
 
-    public void getResult(short number) {
-        setNumberDay(number);
-        processingNumberDayToDate();
-    }
+    public void processingNumberDayToDate(short number) {
+        numberDay = number;
 
-    private void setNumberDay(short numberDay) {
-        this.numberDay = numberDay;
-    }
-
-    private void processingNumberDayToDate() {
         day(31);
         day(28);
         day(31);
@@ -30,21 +23,13 @@ public class Solution {
 
     private void day(int countDays) {
         if (numberDay <= countDays && flag) {
-            dateToScreen();
-            changeFlag();
+            System.out.println(numberDay + " . " + counter);
+            flag = false;
         }
 
         if (numberDay > countDays) {
             numberDay -= countDays;
             counter++;
         }
-    }
-
-    private void dateToScreen() {
-        System.out.println(numberDay + " . " + counter);
-    }
-
-    private void changeFlag() {
-        flag = false;
     }
 }
