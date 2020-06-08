@@ -13,21 +13,21 @@ public class Solution {
     public void processingNumberDayToDate(short number) {
         numberDay = number;
 
-        day(31);
-        day(28);
-        day(31);
-        day(30);
-        day(31);
-        day(30);
-        day(31);
-        day(31);
-        day(30);
-        day(31);
-        day(30);
-        day(31);
+        day((short) 31);
+        day((short) 28);
+        day((short) 31);
+        day((short) 30);
+        day((short) 31);
+        day((short) 30);
+        day((short) 31);
+        day((short) 31);
+        day((short) 30);
+        day((short) 31);
+        day((short) 30);
+        day((short) 31);
     }
 
-    private void day(int countDays) {
+    private void day(short countDays) {
         if (numberDay <= countDays && flag) {
             System.out.println(numberDay + " - день, месяц: " + month);
             flag = false;
