@@ -32,7 +32,9 @@ public class Solution {
         if (numberDay <= countDays && flag) {
             dateToScreen();
             changeFlag();
-        } else {
+        }
+
+        if (numberDay > countDays) {
             numberDay -= countDays;
             counter++;
         }
