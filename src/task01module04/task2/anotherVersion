@@ -1,3 +1,7 @@
+/*
+ * Вычислите число и месяц в невисокосном году по номеру дня.
+ */
+
 public class Solution {
 
     private short numberDay;
