@@ -10,30 +10,39 @@ package task01module04.task5;
 
 public class Solution {
 
-    public int[] transformationNumber(int a) {
-        int h = splitNumberToDigit(a)[0];
-        int d = splitNumberToDigit(a)[1];
-        int c = splitNumberToDigit(a)[2];
-        return new int[] {sumNumbers(h, d, c), multiplicationNumbers(h, d, c), shiftDigits(h, d, c), addDigit(a)};
+    private int number;
+    private int hundred;
+    private int dozen;
+    private int entity;
+
+    public Solution(int number) {
+        this.number = number;
     }
 
-    private int sumNumbers(int a, int b, int c) {
-        return a + b + c;
+    public int[] getResultTransformationNumber() {
+        addValues();
+        return new int[] {sumNumbers(), multiplicationNumbers(), shiftDigits(), addDigit()};
     }
 
-    private int multiplicationNumbers(int a, int b, int c) {
-        return a * b * c;
+    private void addValues() {
+        hundred = (number / 100) % 10;
+        dozen = (number / 10) % 10;
+        entity = number % 10;
     }
 
-    private int[] splitNumberToDigit(int a) {
-        return new int[] {(a / 100) % 10, (a / 10) % 10, a % 10};
+    private int sumNumbers() {
+        return hundred + dozen + entity;
     }
 
-    private int shiftDigits(int hundred, int dozen, int c) {
-        return c + 100 * dozen + 10 * hundred;
+    private int multiplicationNumbers() {
+        return hundred * dozen * entity;
     }
 
-    private int addDigit(int a) {
-        return (a % 10) * 1000 + a;
+    private int shiftDigits() {
+        return entity + 100 * dozen + 10 * hundred;
+    }
+
+    private int addDigit() {
+        return (number % 10) * 1000 + number;
     }
 }
