@@ -1,0 +1,68 @@
+public class Solution {
+
+    private int numberDay;
+    private boolean flag = true;
+    private int counter = 1;
+
+    public void getResult(int number) {
+        setNumberDay(number);
+        processingNumberDayToDate();
+    }
+
+    private void setNumberDay(int numberDay) {
+        this.numberDay = numberDay;
+    }
+
+    private void processingNumberDayToDate() {
+        day31();
+        day28();
+        day31();
+        day30();
+        day31();
+        day30();
+        day31();
+        day31();
+        day30();
+        day31();
+        day30();
+        day31();
+    }
+
+    private void day28() {
+        if (numberDay <= 28 && flag) {
+            sout();
+            changeFlag();
+        } else {
+            numberDay -= 28;
+            counter++;
+        }
+    }
+
+    private void day30() {
+        if (numberDay <= 30 && flag) {
+            sout();
+            changeFlag();
+        } else {
+            numberDay -= 30;
+            counter++;
+        }
+    }
+
+    private void day31() {
+        if (numberDay <= 31 && flag) {
+            sout();
+            changeFlag();
+        } else {
+            numberDay -= 31;
+            counter++;
+        }
+    }
+
+    private void sout() {
+        System.out.println(numberDay + " . " + counter);
+    }
+
+    private void changeFlag() {
+        flag = false;
+    }
+}
