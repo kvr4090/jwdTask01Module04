@@ -8,15 +8,25 @@ package task01module04.task7;
 
 public class Solution {
 
-    public void swapDigits(double r) {
-        System.out.println((double) (fractionalNumber(r) * 1000d + wholeNumber(r)) / 1000);
+    private double number;
+
+    public Solution(double number) {
+        this.number = number;
     }
 
-    private int wholeNumber(double a) {
-        return (int) a;
+    public double getResult() {
+        return swapDigits();
     }
 
-    private int fractionalNumber(double a) {
-        return (int) (a * 1000) % 1000;
+    private double swapDigits() {
+        return (fractionalNumber() * 1000d + wholeNumber()) / 1000;
+    }
+
+    private int wholeNumber() {
+        return (int) number;
+    }
+
+    private int fractionalNumber() {
+        return (int) (number * 1000) % 1000;
     }
 }
