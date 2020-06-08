@@ -8,7 +8,7 @@ public class Solution {
 
     private short numberDay;
     private boolean flag = true;
-    private byte counter = 1;
+    private byte month = 1;
 
     public void processingNumberDayToDate(short number) {
         numberDay = number;
@@ -29,13 +29,13 @@ public class Solution {
 
     private void day(int countDays) {
         if (numberDay <= countDays && flag) {
-            System.out.println(numberDay + " - день, месяц: " + counter);
+            System.out.println(numberDay + " - день, месяц: " + month);
             flag = false;
         }
 
         if (numberDay > countDays) {
             numberDay -= countDays;
-            counter++;
+            month++;
         }
     }
 }
