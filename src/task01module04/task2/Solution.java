@@ -29,13 +29,13 @@ public class Solution {
 
     private void month(short countDays) {
         if (numberDay <= countDays && flag) {
-            System.out.println(numberDay + " - день, месяц: " + month);
+            System.out.println(numberDay + " - день, месяц: " + currentMonth);
             flag = false;
         }
 
         if (numberDay > countDays) {
             numberDay -= countDays;
-            month++;
+            currentMonth++;
         }
     }
 }
