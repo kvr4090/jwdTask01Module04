@@ -14,6 +14,7 @@ public class Solution {
             temp += i;
             result *= temp;
         }
+        
         System.out.println(result);
     }
 }
