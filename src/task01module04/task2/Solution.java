@@ -6,10 +6,10 @@ package task01module04.task2;
 
 public class Solution {
 
-    public void dateByNumberDay(int a) {
-        int temp = a;
+    public void dateByNumberDay(int number) {
+        int temp = number;
 
-        switch (temp / a) {
+        switch (temp / number) {
             case 1:
                 if (temp <= 31) {
                     System.out.println(temp + ".01");
