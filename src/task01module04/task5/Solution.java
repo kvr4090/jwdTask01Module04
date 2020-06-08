@@ -21,7 +21,7 @@ public class Solution {
 
     public int[] getResultTransformationNumber() {
         addValues();
-        return new int[] {sumNumbers(), multiplicationNumbers(), shiftDigits(), addDigit()};
+        return new int[] {sumNumbers(), multiplicationNumbers(), shiftDigits(), concatenationDigit()};
     }
 
     private void addValues() {
@@ -42,7 +42,7 @@ public class Solution {
         return entity + 100 * dozen + 10 * hundred;
     }
 
-    private int addDigit() {
+    private int concatenationDigit() {
         return (number % 10) * 1000 + number;
     }
 }
