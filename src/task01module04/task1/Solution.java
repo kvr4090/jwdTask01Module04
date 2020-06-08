@@ -6,7 +6,7 @@ package task01module04.task1;
 
 public class Solution {
 
-    public double functionValue(int a, int b, int c) {
+    public double getFunctionValue(int a, int b, int c) {
         double result = 0;
         
         if (a == 0) {
