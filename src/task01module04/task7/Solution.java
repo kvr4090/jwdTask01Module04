@@ -9,7 +9,7 @@ package task01module04.task7;
 public class Solution {
 
     public void swapDigits(double r) {
-        System.out.println((double) (fractionalNumber(r) * 1000 + wholeNumber(r)) / 1000);
+        System.out.println((double) (fractionalNumber(r) * 1000d + wholeNumber(r)) / 1000);
     }
 
     private int wholeNumber(double a) {
