@@ -1,15 +1,15 @@
 public class Solution {
 
-    private int numberDay;
+    private short numberDay;
     private boolean flag = true;
     private byte counter = 1;
 
-    public void getResult(int number) {
+    public void getResult(short number) {
         setNumberDay(number);
         processingNumberDayToDate();
     }
 
-    private void setNumberDay(int numberDay) {
+    private void setNumberDay(short numberDay) {
         this.numberDay = numberDay;
     }
 
