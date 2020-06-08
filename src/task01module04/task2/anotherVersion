@@ -14,51 +14,31 @@ public class Solution {
     }
 
     private void processingNumberDayToDate() {
-        day31();
-        day28();
-        day31();
-        day30();
-        day31();
-        day30();
-        day31();
-        day31();
-        day30();
-        day31();
-        day30();
-        day31();
+        day(31);
+        day(28);
+        day(31);
+        day(30);
+        day(31);
+        day(30);
+        day(31);
+        day(31);
+        day(30);
+        day(31);
+        day(30);
+        day(31);
     }
 
-    private void day28() {
-        if (numberDay <= 28 && flag) {
-            sout();
+    private void day(int countDays) {
+        if (numberDay <= countDays && flag) {
+            dateToScreen();
             changeFlag();
         } else {
-            numberDay -= 28;
+            numberDay -= countDays;
             counter++;
         }
     }
 
-    private void day30() {
-        if (numberDay <= 30 && flag) {
-            sout();
-            changeFlag();
-        } else {
-            numberDay -= 30;
-            counter++;
-        }
-    }
-
-    private void day31() {
-        if (numberDay <= 31 && flag) {
-            sout();
-            changeFlag();
-        } else {
-            numberDay -= 31;
-            counter++;
-        }
-    }
-
-    private void sout() {
+    private void dateToScreen() {
         System.out.println(numberDay + " . " + counter);
     }
 
