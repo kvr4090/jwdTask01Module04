@@ -27,7 +27,7 @@ public class Solution {
 
     private void day(int countDays) {
         if (numberDay <= countDays && flag) {
-            System.out.println(numberDay + " . " + counter);
+            System.out.println(numberDay + " - день, месяц: " + counter);
             flag = false;
         }
 
